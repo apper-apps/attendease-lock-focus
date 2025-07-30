@@ -53,11 +53,13 @@ const UserManagement = () => {
   const filterUsers = () => {
     let filtered = users;
 
-    if (searchTerm) {
-      filtered = filtered.filter(user =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        user.email.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+if (searchTerm) {
+      filtered = filtered.filter(user => {
+        const name = user.Name || user.name || '';
+        const email = user.email || '';
+        return name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+               email.toLowerCase().includes(searchTerm.toLowerCase());
+      });
     }
 
     if (roleFilter !== "all") {
@@ -87,10 +89,10 @@ const UserManagement = () => {
     }
   };
 
-  const handleEdit = (user) => {
-setEditingUser(user);
-setFormData({
-name: user.Name || user.name || '',
+const handleEdit = (user) => {
+    setEditingUser(user);
+    setFormData({
+      name: user.Name || user.name || '',
       email: user.email || '',
       phone: user.phone || '',
       role: user.role || ''
@@ -253,13 +255,13 @@ name: user.Name || user.name || '',
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                {filteredUsers.map((user) => (
-<tr key={user.Id} className="hover:bg-gray-50 transition-colors duration-150">
+{filteredUsers.map((user) => (
+                  <tr key={user.Id} className="hover:bg-gray-50 transition-colors duration-150">
                     <td className="py-4 px-6">
                       <div className="flex items-center">
                         <div className="h-10 w-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                           <span className="text-sm font-medium text-white">
-{(user.Name || user.name || 'U').charAt(0)}
+                            {(user.Name || user.name || 'U').charAt(0)}
                           </span>
                         </div>
                         <div className="ml-3">
@@ -275,7 +277,9 @@ name: user.Name || user.name || '',
                       {user.phone || 'No Phone'}
                     </td>
                     <td className="py-4 px-6 text-gray-600">
-                      {format(new Date(user.createdAt), "MMM d, yyyy")}
+                      {user.CreatedOn ? format(new Date(user.CreatedOn), "MMM d, yyyy") : 
+                       user.createdAt ? format(new Date(user.createdAt), "MMM d, yyyy") : 
+                       'N/A'}
                     </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center space-x-2">
