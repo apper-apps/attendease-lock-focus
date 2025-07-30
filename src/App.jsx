@@ -126,18 +126,18 @@ function AppContent() {
   
   return (
     <AuthContext.Provider value={authMethods}>
-      {isAuthenticated ? (
+{isAuthenticated ? (
         <div className="min-h-screen bg-gray-50">
           <Sidebar
             isOpen={sidebarOpen}
             onClose={() => setSidebarOpen(false)}
-            userRole={user?.role || "admin"}
+            userRole={user?.role?.Name || user?.role || "admin"}
           />
           
           <div className="lg:pl-64 flex flex-col flex-1">
             <Header
               onMenuClick={() => setSidebarOpen(true)}
-              userRole={user?.role || "admin"}
+              userRole={user?.role?.Name || user?.role || "admin"}
             />
             
             <main className="flex-1 py-6 px-4 sm:px-6 lg:px-8">
