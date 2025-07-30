@@ -88,12 +88,12 @@ const UserManagement = () => {
   };
 
   const handleEdit = (user) => {
-    setEditingUser(user);
+setEditingUser(user);
     setFormData({
-      name: user.name,
-      email: user.email,
-      phone: user.phone,
-      role: user.role
+      name: user.name?.Name || user.name || '',
+      email: user.email?.Name || user.email || '',
+      phone: user.phone?.Name || user.phone || '',
+      role: user.role?.Name || user.role || ''
     });
     setShowAddForm(true);
   };
@@ -254,17 +254,17 @@ const UserManagement = () => {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {filteredUsers.map((user) => (
-                  <tr key={user.Id} className="hover:bg-gray-50 transition-colors duration-150">
+<tr key={user.Id} className="hover:bg-gray-50 transition-colors duration-150">
                     <td className="py-4 px-6">
                       <div className="flex items-center">
                         <div className="h-10 w-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                           <span className="text-sm font-medium text-white">
-                            {user.name.charAt(0)}
+                            {(user.name?.Name || user.name || 'U').charAt(0)}
                           </span>
                         </div>
                         <div className="ml-3">
-                          <p className="font-medium text-gray-900">{user.name}</p>
-                          <p className="text-sm text-gray-500">{user.email}</p>
+                          <p className="font-medium text-gray-900">{user.name?.Name || user.name || 'No Name'}</p>
+                          <p className="text-sm text-gray-500">{user.email?.Name || user.email || 'No Email'}</p>
                         </div>
                       </div>
                     </td>
