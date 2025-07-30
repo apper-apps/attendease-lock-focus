@@ -50,12 +50,12 @@ const UserManagement = () => {
     }
   };
 
-  const filterUsers = () => {
+const filterUsers = () => {
     let filtered = users;
 
 if (searchTerm) {
       filtered = filtered.filter(user => {
-        const name = user.Name || user.name || '';
+        const name = user.Name?.Name || user.Name || user.name || '';
         const email = user.email || '';
         return name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                email.toLowerCase().includes(searchTerm.toLowerCase());
@@ -63,7 +63,7 @@ if (searchTerm) {
     }
 
     if (roleFilter !== "all") {
-      filtered = filtered.filter(user => user.role === roleFilter);
+      filtered = filtered.filter(user => (user.role?.Name || user.role) === roleFilter);
     }
 
     setFilteredUsers(filtered);
@@ -92,10 +92,10 @@ if (searchTerm) {
 const handleEdit = (user) => {
     setEditingUser(user);
     setFormData({
-      name: user.Name || user.name || '',
+      name: user.Name?.Name || user.Name || user.name || '',
       email: user.email || '',
       phone: user.phone || '',
-      role: user.role || ''
+      role: user.role?.Name || user.role || ''
     });
     setShowAddForm(true);
   };
@@ -261,7 +261,7 @@ const handleEdit = (user) => {
                       <div className="flex items-center">
                         <div className="h-10 w-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                           <span className="text-sm font-medium text-white">
-                            {(user.Name || user.name || 'U').charAt(0)}
+                            {((user.Name?.Name || user.Name || user.name) || 'U').charAt(0)}
                           </span>
 </div>
                         <div className="ml-3">
