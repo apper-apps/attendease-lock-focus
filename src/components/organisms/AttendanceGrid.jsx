@@ -181,12 +181,12 @@ const AttendanceGrid = ({ selectedClassId, selectedDate }) => {
                   <div className="flex items-center">
                     <div className="h-10 w-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                       <span className="text-sm font-medium text-white">
-                        {(student.name?.Name || student.name || 'S').charAt(0)}
+{(student.Name || student.name || 'S').charAt(0)}
                       </span>
                     </div>
                     <div className="ml-3">
-                      <p className="font-medium text-gray-900">{student.name?.Name || student.name || 'No Name'}</p>
-                      <p className="text-sm text-gray-500">{student.email?.Name || student.email || 'No Email'}</p>
+                      <p className="font-medium text-gray-900">{student.Name || student.name || 'No Name'}</p>
+                      <p className="text-sm text-gray-500">{student.email || 'No Email'}</p>
                     </div>
                   </div>
                 </td>

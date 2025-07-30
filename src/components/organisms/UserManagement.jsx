@@ -90,10 +90,10 @@ const UserManagement = () => {
   const handleEdit = (user) => {
 setEditingUser(user);
 setFormData({
-      name: user.name?.Name || user.name || '',
-      email: user.email?.Name || user.email || '',
-      phone: user.phone?.Name || user.phone || '',
-      role: user.role?.Name || user.role || ''
+name: user.Name || user.name || '',
+      email: user.email || '',
+      phone: user.phone || '',
+      role: user.role || ''
     });
     setShowAddForm(true);
   };
@@ -259,20 +259,20 @@ setFormData({
                       <div className="flex items-center">
                         <div className="h-10 w-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                           <span className="text-sm font-medium text-white">
-                            {(user.name?.Name || user.name || 'U').charAt(0)}
+{(user.Name || user.name || 'U').charAt(0)}
                           </span>
                         </div>
                         <div className="ml-3">
-                          <p className="font-medium text-gray-900">{user.name?.Name || user.name || 'No Name'}</p>
-                          <p className="text-sm text-gray-500">{user.email?.Name || user.email || 'No Email'}</p>
+                          <p className="font-medium text-gray-900">{user.Name || user.name || 'No Name'}</p>
+                          <p className="text-sm text-gray-500">{user.email || 'No Email'}</p>
                         </div>
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      <RoleBadge role={user.role?.Name || user.role || 'user'} />
+                      <RoleBadge role={user.role || 'user'} />
                     </td>
                     <td className="py-4 px-6 text-gray-900">
-                      {user.phone?.Name || user.phone || 'No Phone'}
+                      {user.phone || 'No Phone'}
                     </td>
                     <td className="py-4 px-6 text-gray-600">
                       {format(new Date(user.createdAt), "MMM d, yyyy")}
