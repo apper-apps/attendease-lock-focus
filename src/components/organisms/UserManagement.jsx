@@ -263,15 +263,17 @@ const handleEdit = (user) => {
                           <span className="text-sm font-medium text-white">
                             {(user.Name || user.name || 'U').charAt(0)}
                           </span>
-                        </div>
+</div>
                         <div className="ml-3">
-                          <p className="font-medium text-gray-900">{user.Name || user.name || 'No Name'}</p>
+                          <p className="font-medium text-gray-900">
+                            {user.Name?.Name || user.Name || user.name || 'No Name'}
+                          </p>
                           <p className="text-sm text-gray-500">{user.email || 'No Email'}</p>
                         </div>
                       </div>
                     </td>
-                    <td className="py-4 px-6">
-                      <RoleBadge role={user.role || 'user'} />
+<td className="py-4 px-6">
+                      <RoleBadge role={user.role?.Name || user.role || 'user'} />
                     </td>
                     <td className="py-4 px-6 text-gray-900">
                       {user.phone || 'No Phone'}
