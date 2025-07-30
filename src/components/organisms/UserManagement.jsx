@@ -89,7 +89,7 @@ const UserManagement = () => {
 
   const handleEdit = (user) => {
 setEditingUser(user);
-    setFormData({
+setFormData({
       name: user.name?.Name || user.name || '',
       email: user.email?.Name || user.email || '',
       phone: user.phone?.Name || user.phone || '',
@@ -269,10 +269,10 @@ setEditingUser(user);
                       </div>
                     </td>
                     <td className="py-4 px-6">
-                      <RoleBadge role={user.role} />
+                      <RoleBadge role={user.role?.Name || user.role || 'user'} />
                     </td>
                     <td className="py-4 px-6 text-gray-900">
-                      {user.phone}
+                      {user.phone?.Name || user.phone || 'No Phone'}
                     </td>
                     <td className="py-4 px-6 text-gray-600">
                       {format(new Date(user.createdAt), "MMM d, yyyy")}
