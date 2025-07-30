@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useSelector } from 'react-redux';
 import Button from "@/components/atoms/Button";
 import ApperIcon from "@/components/ApperIcon";
 import RoleBadge from "@/components/molecules/RoleBadge";
+import { AuthContext } from "@/App";
 
 const Header = ({ onMenuClick, userRole = "admin" }) => {
+  const { logout } = useContext(AuthContext);
+  const { user } = useSelector((state) => state.user);
+  
   const currentUser = {
-    name: "John Doe",
-    email: "john.doe@school.edu",
-    role: userRole
+    name: user?.firstName && user?.lastName ? `${user.firstName} ${user.lastName}` : user?.Name || "User",
+    email: user?.emailAddress || user?.email || "user@school.edu",
+    role: user?.role || userRole
   };
 
   return (
@@ -27,7 +32,7 @@ const Header = ({ onMenuClick, userRole = "admin" }) => {
           </h2>
         </div>
 
-        <div className="flex items-center space-x-4">
+<div className="flex items-center space-x-4">
           <Button variant="ghost" size="sm" className="relative">
             <ApperIcon name="Bell" className="h-5 w-5" />
             <span className="absolute -top-1 -right-1 h-3 w-3 bg-error-500 rounded-full"></span>
@@ -44,6 +49,14 @@ const Header = ({ onMenuClick, userRole = "admin" }) => {
                 {currentUser.name.charAt(0)}
               </span>
             </div>
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={logout}
+              className="text-gray-500 hover:text-gray-700"
+            >
+              <ApperIcon name="LogOut" className="h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>
