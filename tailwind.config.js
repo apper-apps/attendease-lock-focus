@@ -4,9 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
+theme: {
     extend: {
       colors: {
+        border: '#e5e7eb', // gray-200 - Required for border-border utility
         primary: {
           50: '#eef2ff',
           100: '#e0e7ff',
