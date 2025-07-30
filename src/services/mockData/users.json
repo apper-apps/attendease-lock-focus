@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "name": "John Smith",
+    "email": "john.smith@school.edu",
+    "phone": "(555) 123-4567",
+    "role": "admin",
+    "createdAt": "2023-01-15T10:00:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Emily Johnson",
+    "email": "emily.johnson@school.edu",
+    "phone": "(555) 234-5678",
+    "role": "teacher",
+    "createdAt": "2023-02-01T09:30:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Michael Brown",
+    "email": "michael.brown@school.edu",
+    "phone": "(555) 345-6789",
+    "role": "teacher",
+    "createdAt": "2023-02-15T11:15:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "Sarah Davis",
+    "email": "sarah.davis@parent.com",
+    "phone": "(555) 456-7890",
+    "role": "parent",
+    "createdAt": "2023-03-01T14:20:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "David Wilson",
+    "email": "david.wilson@parent.com",
+    "phone": "(555) 567-8901",
+    "role": "parent",
+    "createdAt": "2023-03-10T16:45:00Z"
+  },
+  {
+    "Id": 6,
+    "name": "Emma Thompson",
+    "email": "emma.thompson@student.school.edu",
+    "phone": "(555) 678-9012",
+    "role": "student",
+    "rollNumber": "2023001",
+    "grade": "10",
+    "createdAt": "2023-08-15T08:00:00Z"
+  },
+  {
+    "Id": 7,
+    "name": "James Anderson",
+    "email": "james.anderson@student.school.edu",
+    "phone": "(555) 789-0123",
+    "role": "student",
+    "rollNumber": "2023002",
+    "grade": "10",
+    "createdAt": "2023-08-15T08:15:00Z"
+  },
+  {
+    "Id": 8,
+    "name": "Olivia Martinez",
+    "email": "olivia.martinez@student.school.edu",
+    "phone": "(555) 890-1234",
+    "role": "student",
+    "rollNumber": "2023003",
+    "grade": "9",
+    "createdAt": "2023-08-16T09:00:00Z"
+  },
+  {
+    "Id": 9,
+    "name": "William Garcia",
+    "email": "william.garcia@student.school.edu",
+    "phone": "(555) 901-2345",
+    "role": "student",
+    "rollNumber": "2023004",
+    "grade": "9",
+    "createdAt": "2023-08-16T09:30:00Z"
+  },
+  {
+    "Id": 10,
+    "name": "Sophia Rodriguez",
+    "email": "sophia.rodriguez@student.school.edu",
+    "phone": "(555) 012-3456",
+    "role": "student",
+    "rollNumber": "2023005",
+    "grade": "11",
+    "createdAt": "2023-08-17T10:00:00Z"
+  }
+]

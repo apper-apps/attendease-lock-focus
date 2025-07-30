@@ -1,0 +1,33 @@
+[
+  {
+    "Id": 1,
+    "type": "absence_alert",
+    "recipientId": 4,
+    "message": "Emma Thompson was absent from Mathematics Advanced today",
+    "sentAt": "2024-01-16T09:30:00Z",
+    "read": false,
+    "studentName": "Emma Thompson",
+    "className": "Mathematics Advanced",
+    "timestamp": "2024-01-16T09:30:00Z"
+  },
+  {
+    "Id": 2,
+    "type": "attendance_reminder",
+    "recipientId": 2,
+    "message": "Please mark attendance for Mathematics Advanced class",
+    "sentAt": "2024-01-15T08:45:00Z",
+    "read": true,
+    "timestamp": "2024-01-15T08:45:00Z"
+  },
+  {
+    "Id": 3,
+    "type": "late_arrival",
+    "recipientId": 5,
+    "message": "William Garcia arrived late to Science Physics class",
+    "sentAt": "2024-01-15T11:20:00Z",
+    "read": false,
+    "studentName": "William Garcia",
+    "className": "Science Physics",
+    "timestamp": "2024-01-15T11:20:00Z"
+  }
+]

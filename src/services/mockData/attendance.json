@@ -1,0 +1,79 @@
+[
+  {
+    "Id": 1,
+    "studentId": 6,
+    "classId": 1,
+    "date": "2024-01-15",
+    "status": "present",
+    "markedBy": "2",
+    "timestamp": "2024-01-15T09:00:00Z",
+    "studentName": "Emma Thompson",
+    "className": "Mathematics Advanced"
+  },
+  {
+    "Id": 2,
+    "studentId": 7,
+    "classId": 1,
+    "date": "2024-01-15",
+    "status": "present",
+    "markedBy": "2",
+    "timestamp": "2024-01-15T09:05:00Z",
+    "studentName": "James Anderson",
+    "className": "Mathematics Advanced"
+  },
+  {
+    "Id": 3,
+    "studentId": 8,
+    "classId": 2,
+    "date": "2024-01-15",
+    "status": "absent",
+    "markedBy": "3",
+    "timestamp": "2024-01-15T11:00:00Z",
+    "studentName": "Olivia Martinez",
+    "className": "Science Physics"
+  },
+  {
+    "Id": 4,
+    "studentId": 9,
+    "classId": 2,
+    "date": "2024-01-15",
+    "status": "late",
+    "markedBy": "3",
+    "timestamp": "2024-01-15T11:15:00Z",
+    "studentName": "William Garcia",
+    "className": "Science Physics"
+  },
+  {
+    "Id": 5,
+    "studentId": 10,
+    "classId": 3,
+    "date": "2024-01-15",
+    "status": "present",
+    "markedBy": "2",
+    "timestamp": "2024-01-15T13:00:00Z",
+    "studentName": "Sophia Rodriguez",
+    "className": "English Literature"
+  },
+  {
+    "Id": 6,
+    "studentId": 6,
+    "classId": 1,
+    "date": "2024-01-16",
+    "status": "absent",
+    "markedBy": "2",
+    "timestamp": "2024-01-16T09:00:00Z",
+    "studentName": "Emma Thompson",
+    "className": "Mathematics Advanced"
+  },
+  {
+    "Id": 7,
+    "studentId": 7,
+    "classId": 1,
+    "date": "2024-01-16",
+    "status": "present",
+    "markedBy": "2",
+    "timestamp": "2024-01-16T09:00:00Z",
+    "studentName": "James Anderson",
+    "className": "Mathematics Advanced"
+  }
+]

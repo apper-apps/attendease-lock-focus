@@ -1,0 +1,87 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+}
+
+/* Toast customization */
+.Toastify__toast-container {
+  @apply text-sm;
+}
+
+.Toastify__toast {
+  @apply rounded-lg shadow-lg border;
+}
+
+.Toastify__toast--success {
+  @apply bg-white border-success-200 text-success-800;
+}
+
+.Toastify__toast--error {
+  @apply bg-white border-error-200 text-error-800;
+}
+
+.Toastify__toast--warning {
+  @apply bg-white border-warning-200 text-warning-800;
+}
+
+.Toastify__toast--info {
+  @apply bg-white border-info-200 text-info-800;
+}
+
+.Toastify__progress-bar--success {
+  @apply bg-success-500;
+}
+
+.Toastify__progress-bar--error {
+  @apply bg-error-500;
+}
+
+.Toastify__progress-bar--warning {
+  @apply bg-warning-500;
+}
+
+.Toastify__progress-bar--info {
+  @apply bg-info-500;
+}
+
+/* Skeleton loading animation */
+.skeleton {
+  @apply animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 bg-[length:200%_100%];
+  animation: shimmer 2s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
