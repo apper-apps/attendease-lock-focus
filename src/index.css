@@ -1,5 +1,119 @@
 @import 'react-toastify/dist/ReactToastify.css';
+@import 'react-toastify/dist/ReactToastify.css';
+
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    color: theme('colors.gray.900');
+    background-color: theme('colors.gray.50');
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.gray.100');
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.300');
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gray.400');
+  }
+}
+
+@layer components {
+  /* Toast customizations */
+  .Toastify__toast-container {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .Toastify__toast {
+    border-radius: theme('borderRadius.lg');
+    box-shadow: theme('boxShadow.lg');
+  }
+
+  .Toastify__toast--success {
+    background-color: theme('colors.success.50');
+    color: theme('colors.success.800');
+    border-left: 4px solid theme('colors.success.500');
+  }
+
+  .Toastify__toast--error {
+    background-color: theme('colors.error.50');
+    color: theme('colors.error.800');
+    border-left: 4px solid theme('colors.error.500');
+  }
+
+  .Toastify__toast--warning {
+    background-color: theme('colors.warning.50');
+    color: theme('colors.warning.800');
+    border-left: 4px solid theme('colors.warning.500');
+  }
+
+  .Toastify__toast--info {
+    background-color: theme('colors.info.50');
+    color: theme('colors.info.800');
+    border-left: 4px solid theme('colors.info.500');
+  }
+
+  .Toastify__progress-bar--success {
+    background-color: theme('colors.success.500');
+  }
+
+  .Toastify__progress-bar--error {
+    background-color: theme('colors.error.500');
+  }
+
+  .Toastify__progress-bar--warning {
+    background-color: theme('colors.warning.500');
+  }
+
+  .Toastify__progress-bar--info {
+    background-color: theme('colors.info.500');
+  }
+}
+
+@layer utilities {
+  /* Skeleton loading animation */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      theme('colors.gray.200') 25%,
+      theme('colors.gray.300') 50%,
+      theme('colors.gray.200') 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
 @tailwind components;
 @tailwind utilities;
 
