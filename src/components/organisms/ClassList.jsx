@@ -65,10 +65,10 @@ const ClassList = ({ onClassSelect, selectedClassId }) => {
           <div className="flex items-start justify-between mb-4">
 <div className="flex-1">
 <h3 className="font-semibold text-gray-900 mb-1">
-                {classItem.name?.Name || classItem.name || 'Unnamed Class'}
+{classItem.Name || classItem.name || 'Unnamed Class'}
               </h3>
               <p className="text-sm text-gray-600 mb-2">
-                Grade {classItem.grade?.Name || classItem.grade || 'N/A'}
+Grade {classItem.grade || 'N/A'}
               </p>
               <Badge variant="info" size="sm">
                 {classItem.studentIds?.length || 0} Students
